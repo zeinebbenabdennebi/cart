@@ -19,13 +19,14 @@ fetch("./data/cards.json")
     generateCards();
     totalPairs = data.length; // Assuming each card in 'data' represents a unique pair.
     totalCards = cards.length;
+    console.log(cards, totalCards, totalPairs);
   });
 
-  
 function shuffleCards() {
   let currentIndex = cards.length,
     randomIndex,
     temporaryValue;
+  console.log(randomIndex);
   while (currentIndex !== 0) {
     randomIndex = Math.floor(Math.random() * currentIndex);
     currentIndex -= 1;
@@ -53,6 +54,7 @@ function generateCards() {
 
 function flipCard() {
   if (lockBoard) return;
+  console.log(this);
   if (this === firstCard) return;
 
   this.classList.add("flipped");
@@ -107,7 +109,6 @@ function resetBoard() {
   firstCard = null;
   secondCard = null;
   lockBoard = false;
-  startTimer()
 }
 
 function restart() {
@@ -117,6 +118,7 @@ function restart() {
   document.querySelector(".score").textContent = score;
   gridContainer.innerHTML = "";
   generateCards();
+  startTimer();
 }
 
 let startTime;
@@ -136,14 +138,16 @@ function updateTimer() {
   const seconds = Math.floor((elapsedTime % (1000 * 60)) / 1000);
 
   // Format the time as "MM:SS"
-  const formattedTime = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+  const formattedTime = `${String(minutes).padStart(2, "0")}:${String(
+    seconds
+  ).padStart(2, "0")}`;
 
   // Display the formatted time in the HTML element
-  document.getElementById('timer').textContent = formattedTime;
+  document.getElementById("timer").textContent = formattedTime;
 }
 
 // Function to stop the timer
 function stopTimer() {
   clearInterval(timerInterval);
 }
-startTimer()
+startTimer();
