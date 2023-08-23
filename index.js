@@ -79,7 +79,7 @@ function checkForMatch() {
     score++;
 
     // Check if the game is finished
-    if (pairsFound === totalPairs) {
+    if (pairsFound === totalpairs) {
       stopTimer(); // Stop the timer when all pairs are found
       alert("Congratulations! You've matched all the pairs!");
     }
