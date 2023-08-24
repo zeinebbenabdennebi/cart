@@ -17,19 +17,25 @@ body {
 }
 
 h1 {
-    text-align: center;
-    font-weight: 700;
-    font-size: 50px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 50px;
 }
 
-img{
+img {
   max-width: 100%;
 }
 
 p {
+<<<<<<< HEAD
     text-align: center;
     font-size: 25px;
     font-weight: bold;
+=======
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+>>>>>>> dd7d95788e2c18b518705cb130f68dc2c0dd7d04
 }
 
 .time{
@@ -37,16 +43,24 @@ p {
 }
 
 .actions {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .actions button {
+<<<<<<< HEAD
     padding: 8px 16px;
     font-size: 20px;
     border-radius: 10px;
     background-color: #f7a67e;
     color: white;
+=======
+  padding: 8px 16px;
+  font-size: 30px;
+  border-radius: 10px;
+  background-color: #27ae60;
+  color: white;
+>>>>>>> dd7d95788e2c18b518705cb130f68dc2c0dd7d04
 }
 
 .grid-container {
@@ -71,14 +85,15 @@ p {
   transform: rotateY(180deg);
 }
 
-.front, .back {
-    backface-visibility: hidden;
-    position: absolute;
-    border-radius: 10px;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
+.front,
+.back {
+  backface-visibility: hidden;
+  position: absolute;
+  border-radius: 10px;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .card .front {
@@ -97,4 +112,19 @@ p {
 
 .card .front {
   transform: rotateY(180deg);
+}
+/**modal**/
+#modal {
+  position: absolute;
+  background-color: #27ae60;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+.showModal {
+  display: flex;
 }
