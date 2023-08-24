@@ -84,6 +84,7 @@ function checkForMatch() {
     if (pairsFound === totalpairs) {
       stopTimer(); // Stop the timer when all pairs are found
       alert("Congratulations! You've matched all the pairs!");
+      restart();
     }
   } else {
     unflipCards();

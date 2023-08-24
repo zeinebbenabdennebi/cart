@@ -9,6 +9,13 @@ body {
   background-size: cover;
 }
 
+.bannier{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 90px;
+}
+
 h1 {
     text-align: center;
     font-weight: 700;
@@ -21,8 +28,12 @@ img{
 
 p {
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
+}
+
+.time{
+  font-size: 25px;
 }
 
 .actions {
@@ -32,9 +43,9 @@ p {
 
 .actions button {
     padding: 8px 16px;
-    font-size: 30px;
+    font-size: 20px;
     border-radius: 10px;
-    background-color: #27ae60;
+    background-color: #f7a67e;
     color: white;
 }
 
