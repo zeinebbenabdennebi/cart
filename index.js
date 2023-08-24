@@ -4,7 +4,7 @@ let firstCard, secondCard;
 let lockBoard = false;
 let score = 0;
 let pairsFound = 0;
-
+const modal = document.getElementById("modal");
 document.querySelector(".score").textContent = score;
 
 let totalCards;
@@ -19,14 +19,13 @@ fetch("./data/cards.json")
     generateCards();
     totalPairs = data.length; // Assuming each card in 'data' represents a unique pair.
     totalCards = cards.length;
-    console.log(cards, totalCards, totalPairs);
+    console.log(totalCards, totalPairs);
   });
 
 function shuffleCards() {
   let currentIndex = cards.length,
     randomIndex,
     temporaryValue;
-  console.log(randomIndex);
   while (currentIndex !== 0) {
     randomIndex = Math.floor(Math.random() * currentIndex);
     currentIndex -= 1;
@@ -83,7 +82,9 @@ function checkForMatch() {
     // Check if the game is finished
     if (pairsFound === totalPairs) {
       stopTimer(); // Stop the timer when all pairs are found
-      alert("Congratulations! You've matched all the pairs!");
+      //alert("Congratulations! You've matched all the pairs!");
+
+      restart();
     }
   } else {
     unflipCards();
@@ -150,4 +151,6 @@ function updateTimer() {
 function stopTimer() {
   clearInterval(timerInterval);
 }
-startTimer();
+console.log(modal);
+modal.classList.add = "showModal";
+console.log(modal);
